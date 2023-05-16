@@ -137,7 +137,7 @@ async function callMyChatBot(text){
       console.log("GPT4 - od1 response1 = \n\t>> " + response1.response);
   
       let od2 = Date.now();
-      const response2 = await chain3.call({input: "Translate this sentence from English to French. I love programming."});
+      const response2 = await chain3.call({input: "Translate this sentence from English to French. " + text});
   
       console.log("GPT3 answered---> od2 langchain returned in : " + (Date.now()-od2)/1000);
       console.log("GPT3 - od2 response1 \n\t>> " + response2.response);
